@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="KlaynMolina" />
+<link rel="stylesheet" href="/css/style.css" />
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="icon" href="/img/km-bank.png">
+<title>TRANSAÇÃO</title>
+</head>
+<body>
+	<script>
+		swal("LIMITE TED NÃO PERMITIDO", "Transferências via TED só são permitidas para valores acima de R$ 5 mil. Tente novamente!");
+	</script>
+	<header>
+		<nav class="menu">
+			<a th:href="@{/pagina-inicial}"><img class="logo"
+				src="/img/km-bank.png"></a>
+			<ul>
+				<li class="sair"><a th:href="@{/pagina-inicial}">Sair</a></li>
+			</ul>
+		</nav>
+		<!-- menu -->
+	</header>
+	<div class="container">
+		<h1 class="title-metodo-pagamento">Método de Pagamento</h1>
+		<div class="form-metodo-pagamento">
+			<div class="botoes-pagamento">
+					<form method="post">
+				<div class="btn-alinhamento">
+					<button type="submit" formaction="metodo-pagamento-pix" formmethod="post" class="btn btn-forma-pagamento">Realizar Pix</button>
+				</div><!-- /btn-alinhamento -->
+				<div class="btn-alinhamento">
+					<button type="submit" formaction="metodo-pagamento-ted" formmethod="post" class="btn btn-forma-pagamento">Realizar Ted</button>
+				</div><!-- /btn-alinhamento -->
+				<div class="">
+					<button type="submit" formaction="metodo-pagamento-doc" formmethod="post" class="btn">Realizar Doc</button>
+				</div><!-- /btn-alinhamento -->
+						</form>
+			</div>
+			<!-- /botoes-pagamento -->
+		</div>
+		<!-- /form-metodo-pagamento -->
+	</div>
+	<!-- /container -->
+	<footer>
+		<a class="github" href="https://github.com/klaynmolina">@Developed
+			by Molina</a>
+	</footer>
+</body>
+</html>

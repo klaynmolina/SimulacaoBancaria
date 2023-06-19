@@ -1,0 +1,13 @@
+com\SimulacaoTransacaoBancaria\SimulacaoTransacaoBancariaApplication.class
+com\SimulacaoTransacaoBancaria\utility\ImportClientesContas.class
+com\SimulacaoTransacaoBancaria\service\ContaService.class
+com\SimulacaoTransacaoBancaria\repository\ClienteRepository.class
+com\SimulacaoTransacaoBancaria\utility\Validacao.class
+com\SimulacaoTransacaoBancaria\repository\ContaRepository.class
+com\SimulacaoTransacaoBancaria\security\SecurityConfig.class
+com\SimulacaoTransacaoBancaria\model\Conta.class
+com\SimulacaoTransacaoBancaria\controller\BankController.class
+com\SimulacaoTransacaoBancaria\controller\ErrorsController.class
+com\SimulacaoTransacaoBancaria\service\ClienteService.class
+com\SimulacaoTransacaoBancaria\utility\Operador.class
+com\SimulacaoTransacaoBancaria\model\Cliente.class

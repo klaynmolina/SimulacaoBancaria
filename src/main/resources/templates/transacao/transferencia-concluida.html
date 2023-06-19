@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="KlaynMolina" />
+<link rel="stylesheet" href="/css/style.css" />
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="icon" href="/img/km-bank.png">
+<title>TRANSAÇÃO CONCLUÍDA</title>
+</head>
+<body>
+	<script>
+		swal("TRANSFERÊNCIA CONCLUÍDA",
+				"Sua transferência foi concluída com sucesso!");
+	</script>
+	<header>
+		<nav class="menu">
+			<a th:href="@{/pagina-inicial}"><img class="logo"
+				src="/img/km-bank.png"></a>
+			<ul>
+				<li><a th:href="@{/pagina-inicial}">Sair</a></li>
+			</ul>
+		</nav><!-- menu -->		
+	</header>
+	<div class="container">
+		<h1 class="title-transferencia-concluida">Sua transferência foi
+			realizada com sucesso!</h1>
+		<div class="transferencia-concluida" th:object="${operador}">
+			<div class="saldos">
+				<h2 class="titular">Emissor</h2>
+				<h2 th:text="${operador.contaEmissor.exibirContaSaldo()}"></h2>
+			</div><!-- /saldos -->			
+			<div class="saldos">
+				<h2 class="titular">Receptor</h2>
+				<h2 th:text="${operador.contaReceptor.exibirContaSaldo()}"></h2>
+			</div><!-- /saldos -->			
+		</div><!-- /transferencia-concluida -->		
+		<div class="btns">
+			<a th:href="@{login}" class="btn btn-nova-transferencia">Nova
+				Transferência</a>
+		</div><!-- /btns -->		
+	</div><!-- /container -->
+	<footer>
+		<a class="github" href="https://github.com/klaynmolina">@Developed
+			by Molina</a>
+	</footer>
+</body>
+</html>

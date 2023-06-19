@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="KlaynMolina" />
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="icon" href="../img/km-bank.png">
+<title>Página Inicial</title>
+</head>
+<body>
+	<header>
+		<nav class="menu">
+			<a th:href="@{/pagina-inicial}"><img class="logo" src="../img/km-bank.png"></a>
+			<ul>
+				<li><a th:href="@{/cadastrar-cliente}">Cadastrar Cliente</a></li>
+				<li><a th:href="@{/abrir-conta}">Abrir Conta</a></li>
+				<li><a th:href="@{/login}">Fazer Login</a></li>
+			</ul>
+		</nav><!-- /menu -->		
+	</header>
+	<div class="container-inicial">
+		<h2 class="title-inicial title-index">Simulação de Transação Bancária</h2>
+		<!-- <h1 class="title-inicial">Página Inicial</h1> -->
+		<h1 class="logo-bank-align"><img class="logo-bank" src="../img/km-bank-marsala.png"></h1>
+		
+		<h1 class="title-inicial">Bem vindo ao Sistema Bancário</h1>
+	</div><!-- /container-inicial -->	
+	<footer>
+		<a class="github" href="https://github.com/klaynmolina">@Developed
+			by Molina</a>
+	</footer>
+</body>
+</html>

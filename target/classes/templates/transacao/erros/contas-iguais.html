@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="KlaynMolina" />
+<link rel="stylesheet" href="/css/style.css" />
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="icon" href="/img/km-bank.png">
+<title>TRANSAÇÃO</title>
+</head>
+<body>
+	<script>
+		swal("CONTAS IGUAIS",
+				"Não é Possível Transferir Para Mesma Conta! Tente novamente!");
+	</script>
+	<header>
+		<nav class="menu">
+			<a th:href="@{/pagina-inicial}"><img class="logo"
+				src="/img/km-bank.png"></a>
+			<ul>
+				<li><a class="sair" th:href="@{/pagina-inicial}">Sair</a></li>
+			</ul>
+		</nav><!-- menu -->
+	</header>
+	<div class="container">
+		<h1 class="title-dados-transferencia">Dados da Transferência</h1>
+		<div class="form-dados-transferencia">
+			<form id="recep" method="post" action="/selecionar-receptor"
+				th:object="${operador}">
+					<div class="dados-transferencia">
+						<label for="conta-emissor" class="label-dados-transferencia">Conta
+							Emissor:</label> <input readonly="readonly"
+							th:value="${operador.contaEmissor.numeroConta}">
+					</div><!-- /input-transferencia -->
+					<div class="dados-transferencia">
+						<label for="conta-receptor" class="label-dados-transferencia">Conta
+							Receptor:</label> <input type="text" th:field="*{contaReceptor.numeroConta}" onkeypress="return event.charCode>= 48 && event.charCode <= 57 ||
+							event.charCode == 13" minlength="6" required>
+					</div><!-- /input-transferencia -->
+				<div class="btns">
+					<button type="submit" class="btn btn-avancar">Avançar</button>
+				</div><!-- /btns -->
+			</form>
+		</div><!-- /form-transferencia -->
+	</div><!-- /container -->
+	<footer>
+		<a class="github" href="https://github.com/klaynmolina">@Developed
+			by Molina</a>
+	</footer>
+</body>
+</html>

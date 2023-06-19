@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="KlaynMolina" />
+<link rel="stylesheet" href="/css/style.css" />
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="icon" href="/img/km-bank.png">
+<title>TRANSAÇÃO</title>
+</head>
+<body>
+	<script>
+		swal("VALOR INVÁLIDO", "Não é Possível Realizar Transferência Com Valor 0. Tente novamente!");
+	</script>
+	<header>
+		<nav class="menu">
+			<a th:href="@{/pagina-inicial}"><img class="logo"
+				src="/img/km-bank.png"></a>
+			<ul>
+				<li class="sair"><a th:href="@{/pagina-inicial}">Sair</a></li>
+			</ul>
+		</nav><!-- menu -->
+	</header>
+	<div class="container">
+		<h1 class="title-valor-transferencia">Selecione o Valor Para Transferência</h1>
+		<div class="form-valor-transferencia">
+			<form method="post" action="/selecionar-valor" th:object="${operador}">
+					<div class="valor-transferencia">
+						<label class="label-valor">Valor R$: </label>
+						<input type="text" th:field="*{valorTransacao}" onkeypress="return event.charCode >= 48 && event.charCode <= 57 || event.charCode == 13 || event.charCode == 46 || event.charCode == 44" onchange="this.value = this.value.replace(/,/g, '.')" required>
+					</div><!-- /valor-transferencia -->
+					<div class="btns">
+						<button type="submit" class="btn btn-avancar-valor">Avançar</button>
+					</div><!-- /btns -->
+			</form>
+		</div><!-- /form-valor-transferencia -->
+	</div><!-- /container -->
+	<footer>
+		<a class="github" href="https://github.com/klaynmolina">@Developed
+			by Molina</a>
+	</footer>
+</body>
+</html>

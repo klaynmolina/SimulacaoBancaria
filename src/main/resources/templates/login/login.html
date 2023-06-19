@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="KlaynMolina" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="icon" href="/img/km-bank.png">
+<title>LOGIN</title>
+</head>
+<body>
+	<header>
+		<nav class="menu">
+			<a th:href="@{/pagina-inicial}"><img class="logo"
+				src="/img/km-bank.png"></a>
+			<ul>
+				<li><a th:href="@{/pagina-inicial}">Página Inicial</a></li>
+				<li><a th:href="@{/abrir-conta}">Abrir Conta</a></li>
+				<li><a th:href="@{/cadastrar-cliente}">Cadastrar Cliente</a></li>
+			</ul>
+		</nav>
+		<!-- menu -->
+	</header>
+	<div class="container">
+		<h1 class="title-login">Login</h1>
+		<div class="form-login">
+			<form method="post" action="/selecionar-emissor"
+				th:object="${cliente}">
+				<div class="campos-login">
+					<div class="input-login">
+						<label for="cpf" class="label-login">CPF:</label> <input
+							type="text" class="size-input-login" th:field="*{cpf}"
+							onkeypress="return event.charCode>= 48 && event.charCode <= 57 || event.charCode == 13"
+							required maxlength="11" minlength="11">
+					</div>
+					<!-- /campos-login -->
+					<div class="input-login">
+						<label for="senha" class="label-login">Senha: </label> <input
+							type="password" class="size-input-login " th:field="*{senha}"
+							required size="8" minlength="8" maxlength="20">
+					</div>
+					<!-- /campos-login -->
+				</div>
+				<!-- /campos login -->
+				<div class="btns btn-login">
+					<button type="submit" class="btn">Login</button>
+				</div>
+				<!-- /btn login -->
+			</form>
+		</div>
+		<!-- /form-login -->
+	</div>
+	<!-- /container -->
+	<footer>
+		<a class="github" href="https://github.com/klaynmolina">@Developed
+			by Molina</a>
+	</footer>
+</body>
+</html>

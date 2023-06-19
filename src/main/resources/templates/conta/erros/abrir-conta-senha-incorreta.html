@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="KlaynMolina" />
+<link rel="stylesheet" href="/css/style.css" />
+<script src="js/scripts.js" defer></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="icon" href="/img/km-bank.png">
+<title>ABRIR CONTA</title>
+</head>
+<body>
+	<script>
+		swal("SENHA INCORRETA", "Sua Senha Está Incorreta. Tente novamente!");
+	</script>
+	<header>
+		<nav class="menu">
+			<a th:href="@{/pagina-inicial}"><img class="logo"
+				src="/img/km-bank.png"></a>
+			<ul>
+				<li><a th:href="@{/pagina-inicial}">Página Inicial</a></li>
+				<li><a th:href="@{/cadastrar-cliente}">Cadastrar Cliente</a></li>
+				<li><a th:href="@{/login}">Fazer Login</a></li>
+			</ul>
+		</nav><!-- menu -->
+	</header>
+	<div class="container">
+		<h1 class="title-abrir-conta">Abrir Conta</h1>
+		<div class="form-abrir-conta">
+			<form method="post" action="/abertura-conta-concluida"
+				th:object="${cliente}">
+				<div class="campos-form-abrir-conta">
+					<div class="input-abrir-conta">
+						<label class="label-abrir-conta" for="cpf">CPF: </label> <input type="text"
+							th:field="*{cpf}"
+							onkeypress="return event.charCode >= 48 && event.charCode <= 57 || event.charCode == 13"
+							required maxlength="11" minlength="11" />
+					</div><!-- /input-abrir-conta -->
+					<div class="input-abrir-conta">
+						<label class="label-abrir-conta" for="senha">Senha: </label> <input type="password"
+							th:field="*{senha}" required size="8"
+							minlength="8" maxlength="20" />
+					</div><!-- /input-abrir-conta -->
+				</div><!-- /campos-form-abrir-conta -->
+				<div class="btns">
+					<button type="submit" class="btn btn-nova-conta">Nova Conta</button>
+				</div><!-- /btns -->
+			</form>
+		</div><!-- /form-abrir-conta -->
+	</div><!-- /container -->
+
+	<footer>
+		<a class="github" href="https://github.com/klaynmolina">@Developed
+			by Molina</a>
+	</footer>
+</body>
+</html>

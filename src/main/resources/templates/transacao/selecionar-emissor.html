@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="KlaynMolina" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="icon" href="/img/km-bank.png">
+<title>TRANSAÇÃO</title>
+</head>
+<body>
+	<header>
+		<nav class="menu">
+			<a th:href="@{/pagina-inicial}"><img class="logo"
+				src="/img/km-bank.png"></a>
+			<ul>
+				<li ><a class="sair" th:href="@{/pagina-inicial}">Sair</a></li>
+			</ul>
+		</nav><!-- menu -->
+	</header>
+	<div class="container">
+		<h1 class="title-contas">Informação das Contas</h1>
+		<div class="exibir-titular">
+			<h2>Titular: <span th:text="${cliente.nome}"></span></h2>
+			<h2>CPF: <span th:text="${cliente.exibirCpf()}"></span></h2>
+		</div><!-- /exibir-titular -->
+		<div class="exibir-contas">
+			<table class="table-contas">
+				<thead>
+					<tr>
+						<th>Número da Agência</th>
+						<th>Número da Conta</th>
+						<th>Saldo R$</th>
+						<th>Transferir por:</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="conta : ${contasCliente}">
+						<td class="agencia" th:text="${conta.agencia}"></td>
+						<td class="conta" th:text="${conta.numeroConta}"></td>
+						<td class="saldo" th:text="${conta.exibirSaldo()}"></td>
+						<td class="btn-selecionar"><a class="btn-selecionar-link"
+							th:href="@{emissorSelecionado/{numeroConta}(numeroConta=${conta.numeroConta})}">Selecionar</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div><!-- /exibir-contas -->
+	</div><!-- /container -->
+	<footer>
+		<a class="github" href="https://github.com/klaynmolina">@Developed
+			by Molina</a>
+	</footer>
+</body>
+</html>

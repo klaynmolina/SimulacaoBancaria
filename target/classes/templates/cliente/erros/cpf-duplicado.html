@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="KlaynMolina" />
+<link rel="stylesheet" href="/css/style.css" />
+<script src="js/scripts.js" defer></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="icon" href="/img/km-bank.png">
+<title>CADASTRAR</title>
+</head>
+<body>
+	<script>
+		swal("CPF JÁ CADASTRADO", "O CPF informado já consta cadastrado. Tente Novamente!");
+	</script>
+		<header>
+		<nav class="menu">
+			<a th:href="@{/pagina-inicial}"><img class="logo"
+				src="/img/km-bank.png"></a>
+			<ul>
+				<li><a th:href="@{/pagina-inicial}">Página Inicial</a></li>
+				<li><a th:href="@{/abrir-conta}">Abrir Conta</a></li>
+				<li><a th:href="@{/login}">Fazer Login</a></li>
+			</ul>
+		</nav><!-- menu -->		
+	</header>
+	<div class="container">
+		<h1 class="title-cadastro">Cadastrar Cliente</h1>
+		<div class="form-cadastro-cliente">
+			<form method="post" action="/cadastro-cliente-concluido"
+				th:object="${cliente}">
+				<div class="campos-form-cadastro-cliente">
+					<div class="input-cadastro-cliente">
+						<label class="label-cadastro-cliente" for="nome">Nome:</label> <input
+							type="text" th:field="*{nome}" required />
+					</div><!-- /input-cadastro-cliente -->					
+					<div class="input-cadastro-cliente">
+						<label class="label-cadastro-cliente" for="cpf">CPF:</label> <input
+							type="text" th:field="*{cpf}"
+							onkeypress="return event.charCode >= 48 && event.charCode <= 57 || event.charCode == 13"
+							maxlength="11" minlength="11" required />
+					</div><!-- /input-cadastro-cliente -->					
+					<div class="input-cadastro-cliente">
+						<label class="label-cadastro-cliente" for="senha">Senha:</label> <input
+							type="text" th:field="*{senha}" size="8" minlength="8"
+							maxlength="20" required />
+					</div><!-- /input-cadastro-cliente -->					
+				</div><!-- /campos-form-cadastro-cliente -->				
+				<div class="btns">
+					<button type="submit" class="btn btn-cadastro">Cadastrar</button>
+				</div><!-- /btns -->				
+			</form>
+		</div><!-- /form-cadastro-cliente -->		
+	</div><!-- /container -->	
+	<footer>
+		<a class="github" href="https://github.com/klaynmolina">@Developed
+			by Molina</a>
+	</footer>
+</body>
+</html>

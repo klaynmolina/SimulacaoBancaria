@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="KlaynMolina" />
+<link rel="stylesheet" href="/css/style.css" />
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="icon" href="/img/km-bank.png">
+<title>ERRO DESCONHECIDO</title>
+</head>
+<body>
+	<script>
+		swal("ERRO DESCONHECIDO",
+				"Um Erro Desconhecido Ocorreu. Tente novamente!");
+	</script>
+	<header>
+		<nav class="menu">
+			<a th:href="@{/pagina-inicial}"><img class="logo"
+				src="/img/km-bank.png"></a>
+			<ul>
+				<li><a th:href="@{/pagina-inicial}">Página Inicial</a></li>
+				<li><a th:href="@{/abrir-conta}">Abrir Conta</a></li>
+				<li><a th:href="@{/cadastrar-cliente}">Cadastrar Cliente</a></li>
+				<li><a th:href="@{/login}">Fazer Login</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
+		<h1 class="title-erro">ERRO DESCONHECIDO</h1>
+		<h2 class="sub-title-erro">Um Erro Desconhecido Ocorreu!</h2>
+		<div class="btns btn-erro">
+			<a th:href="@{/login}"><button type="button" class="btn btn-autenticacao">Fazer Login</button></a>
+		</div>
+	</div>
+	<footer>
+		<a class="github" href="https://github.com/klaynmolina">@Developed by Molina</a>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="KlaynMolina" />
+<link rel="stylesheet" href="/css/style.css" />
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="icon" href="/img/km-bank.png">
+<title>TRANSAÇÃO CONCLUÍDA</title>
+</head>
+<body>
+	<header>
+		<nav class="menu">
+			<a th:href="@{/pagina-inicial}"><img class="logo"
+				src="/img/km-bank.png"></a>
+			<ul>
+				<li><a th:href="@{/pagina-inicial}">Sair</a></li>
+			</ul>
+		</nav>
+		<!-- menu -->
+	</header>
+	<div class="container">
+		<h1 class="title-confirmar">Confirme os Dados da Transferência</h1>
+		<form method="post" action="transferencia-concluida">
+			<div class="container-confirmar-transferencia" th:object="${operador}">
+				<div class="confirmar-transferencia">
+				<div class="confirmar-transferencia-row">
+					<h2 class="titular">Conta Emissor:</h2>
+					<span class="span-confirmacao" th:text="${operador.contaEmissor.numeroConta}"></span>
+				</div><!-- /confirmar-transferencia-row -->
+				<div class="confirmar-transferencia-row">
+					<h2 class="titular">Conta Receptor:</h2>
+					<span class="span-confirmacao" th:text="${operador.contaReceptor.numeroConta}"></span>
+				</div><!-- /confirmar-transferencia-row -->
+				<div class="confirmar-transferencia-row">
+					<h2 class="titular">Valor a Transferir R$</h2>
+					<span class="span-confirmacao" th:text="${operador.exibirValorTransacao()}"></span>
+				</div><!-- /confirmar-transferencia-row -->
+			</div><!-- /confirmar-transferencia -->
+			</div><!-- /container-confirmar-transferencia -->
+			<div class="btns">
+				<button type="submit" class="btn btn-confirmar">CONFIRMAR</button>
+			</div>
+			<!-- /btn-alinhamento -->
+		</form>
+		<div class="btns">
+			<a th:href="@{/pagina-inicial}" class="btn btn-link-oferta">CANCELAR</a>
+		</div>
+		<!-- /btn-alinhamento -->
+	</div>
+	<!-- /container -->
+
+	<footer>
+		<a class="github" href="https://github.com/klaynmolina">@Developed
+			by Molina</a>
+	</footer>
+</body>
+</html>

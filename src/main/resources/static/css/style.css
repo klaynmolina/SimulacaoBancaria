@@ -1,0 +1,628 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.cores {
+	/* Marsala */
+	color: #7B193F;
+
+	/* Bege */
+	color: #CFC7C0;
+
+	/* Marrom Contraste */
+	color: #716863;
+}
+
+.gradient {
+	background-image: linear-gradient(to left, turquoise, steelblue, rebeccapurple);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: #171717;
+}
+
+/*------------------GERAL------------------*/
+html {
+	min-height: 100vh;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #CFC7C0;
+	color: #231D19;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input {
+	width: 200px;
+	height: 30px;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+.btns {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.btn {
+	width: 200px;
+	height: 60px;
+	font-size: 1.5rem;
+	color: #CFC7C0;
+	background-color: #7B193F;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #7B193F;
+	color: #716863;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+	appearance: textfield;
+}
+
+/*------------------/GERAL------------------*/
+
+/*------------------HEADER------------------*/
+header {
+	width: 100vw;
+	height: 70px;
+	position: fixed;
+	background-color: #7B193F;
+	padding: 16px;
+	color: #FFFFFF;
+}
+
+.menu {
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: right;
+	margin-right: 250px;
+}
+
+.menu ul li {
+	display: inline;
+}
+
+.menu ul li a {
+	padding: 2px 20px;
+	display: inline-block;
+	list-style-type: none;
+	text-decoration: none;
+	color: #CFC7C0;
+}
+
+.menu ul li a:hover {
+	border-bottom: 3px solid #CFC7C0;
+}
+
+.logo {
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	left: 400px;
+	top: 30px;
+	bottom: 30px;
+}
+
+.logo-bank {
+	height: 150px;
+	width: 150px;
+	margin-top: 50px;
+}
+
+.logo-bank-align {
+	text-align: center;
+}
+
+.sair {
+	position: absolute;
+	right: 400px;
+}
+
+/*------------------/HEADER------------------*/
+
+/*------------------PAGINA INICIAL------------------*/
+.container-inicial {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 600px;
+}
+
+.title-inicial {
+	text-align: center;
+	padding: 5px;
+	margin-top: 3%;
+}
+
+.title-index {
+	text-align: center;
+	padding: 5px;
+	margin-top: 10%;
+}
+
+/*------------------/PAGINA INICIAL------------------*/
+
+/*------------------CADASTRAR CLIENTE------------------*/
+.title-cadastro {
+	margin-top: 12%;
+	margin-bottom: 3%;
+	text-align: center;
+}
+
+.oferta-conta {
+	margin-top: 5%;
+	text-align: center;
+}
+
+.info-conta {
+	margin-top: 1%;
+	text-align: center;
+}
+
+.form-cadastro-cliente {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	align-self: center;
+	border: 2px solid #7B193F;
+	border-radius: 10px;
+	padding: 50px;
+}
+
+.campos-form-cadastro-cliente {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+}
+
+.label-cadastro-cliente {
+	font-size: 1.5rem;
+	margin-right: 3%;
+}
+
+.input-cadastro-cliente {
+	margin: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-cadastro {
+	margin-top: 7%;
+}
+
+.btn-link-oferta {
+	margin-top: 3%;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+}
+
+/*------------------/CADASTRAR CLIENTE------------------*/
+
+/*------------------LOGIN------------------*/
+.title-login {
+	margin-top: 12%;
+	margin-bottom: 3%;
+	text-align: center;
+}
+
+.form-login {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	align-self: center;
+	border: 2px solid #7B193F;
+	border-radius: 10px;
+	padding: 50px;
+}
+
+.campos-login {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+}
+
+.input-login {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 5%;
+}
+
+.label-login {
+	font-size: 1.5rem;
+	margin-right: 3%;
+}
+
+.btn-login {
+	margin-top: 7%;
+}
+
+/*------------------/LOGIN------------------*/
+
+/*------------------ABRIR CONTA------------------*/
+.title-abrir-conta {
+	margin-top: 12%;
+	margin-bottom: 3%;
+	text-align: center;
+}
+
+.form-abrir-conta {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	align-self: center;
+	border: 2px solid #7B193F;
+	border-radius: 10px;
+	padding: 50px;
+}
+
+.campos-form-abrir-conta {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+}
+
+.input-abrir-conta {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 5%;
+}
+
+.label-abrir-conta {
+	font-size: 1.5rem;
+	margin-right: 3%;
+}
+
+.btn-nova-conta {
+	margin-top: 7%;
+}
+
+/*------------------/ABRIR CONTA------------------*/
+
+/*------------------SELECIONAR EMISSOR------------------*/
+.title-contas {
+	margin-top: 10%;
+	text-align: center;
+}
+
+tr, td, th {
+	border: #000 solid 1px;
+	font-size: 20px;
+	text-align: center;
+}
+
+th {
+	padding: 5px;
+}
+
+.exibir-titular {
+	display: flex;
+	flex-direction: column;
+	align-items: right;
+	align-self: center;
+	width: 800px;
+}
+
+.exibir-contas {
+	display: flex;
+	align-items: center;
+	align-self: center;
+	flex-direction: column;
+}
+
+.table-contas {
+	border: #000 solid 1px;
+	width: 800px;
+}
+
+.btn-selecionar {
+	border: #000 solid 1px;
+	font-size: 25px;
+	height: 40px;
+	color: #CFC7C0;
+	background-color: #7B193F;
+}
+
+.btn-selecionar:hover {
+	background-color: #7B193F;
+	color: #716863;
+	cursor: pointer;
+}
+
+.btn-selecionar-link {
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 4px 20px;
+}
+
+.btn-selecionar-link:hover {
+	background-color: #7B193F;
+	color: #716863;
+}
+
+/*------------------/SELECIONAR EMISSOR------------------*/
+
+/*------------------SELECIONAR RECEPTOR------------------*/
+.title-dados-transferencia {
+	margin-top: 10%;
+	margin-bottom: 3%;
+	text-align: center;
+}
+
+.form-dados-transferencia {
+	width: 400px;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	align-self: center;
+	border: 2px solid #7B193F;
+	border-radius: 10px;
+	padding: 50px;
+}
+
+.dados-transferencia {
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	margin-bottom: 10%;
+	margin-left: 10%
+}
+
+.label-dados-transferencia {
+	width: 230px;
+	font-size: 1.5rem;
+	margin-right: 3%;
+	font-size: 1.5rem;
+}
+
+.btn-avancar {
+	margin-top: 5%;
+	margin-left: 2%;
+}
+
+/*------------------/SELECIONAR RECEPTOR------------------*/
+
+/*------------------/SELECIONAR VALOR------------------*/
+.title-valor-transferencia {
+	margin-top: 15%;
+	margin-bottom: 3%;
+	text-align: center;
+}
+
+.form-valor-transferencia {
+	width: 400px;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	align-self: center;
+	border: 2px solid #7B193F;
+	border-radius: 10px;
+	padding: 50px;
+}
+
+.label-valor {
+	font-size: 1.5rem;
+	margin-right: 3%;
+}
+
+.valor-transferencia {
+	display: flex;
+	align-items: center;
+	width: 350px;
+	margin-bottom: 18%;
+}
+
+.btn-avancar-valor {
+	margin-right: 10%;
+}
+
+/*------------------/SELECIONAR VALOR------------------*/
+
+/*------------------MÉTODO DE PAGAMENTO------------------*/
+.title-metodo-pagamento {
+	margin-top: 11%;
+	margin-bottom: 5%;
+	text-align: center;
+}
+
+.form-metodo-pagamento {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+	width: 300px;
+	height: 300px;
+	border: #7B193F 2px solid;
+	border-radius: 10px;
+}
+
+.btn-alinhamento {
+	margin-bottom: 10%;
+}
+
+.btn-forma-pagamento {
+	margin-right: 20%;
+}
+
+/*------------------/MÉTODO DE PAGAMENTO------------------*/
+
+/*------------------/CONFIRMAR TRANSFERÊNCIA------------------*/
+.title-confirmar {
+	margin-top: 10%;
+	text-align: center;
+}
+
+.container-confirmar-transferencia {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+	flex-direction: column;
+}
+
+.confirmar-transferencia {
+	width: 400px;
+	height: 210px;
+	border: 2px solid #7B193F;
+	border-radius: 10px;
+}
+
+.confirmar-transferencia-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+}
+
+.span-confirmacao {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.btn-confirmar {
+	margin-top: 2%;
+}
+
+/*------------------/CONFIRMAR TRANSFERÊNCIA------------------*/
+
+/*------------------TRANSFERÊNCIA CONCLUIDA------------------*/
+.title-transferencia-concluida {
+	margin-top: 11%;
+	margin-bottom: 5%;
+	text-align: center;
+}
+
+.transferencia-concluida {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+	flex-direction: column;
+	width: 500px;
+	height: 200px;
+	border: #7B193F 2px solid;
+	border-radius: 10px;
+}
+
+.titular {
+	margin-right: 10px;
+}
+
+.saldos {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+.saldo-concluido {
+	font-size: 2rem;
+	margin-left: 10px;
+}
+
+.btn-nova-transferencia {
+	margin-top: 3%;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	font-weight: 600;
+}
+
+/*------------------/TRANSFERÊNCIA CONCLUIDA------------------*/
+
+/*------------------/ERROS-GERAL------------------*/
+.title-erro {
+	text-align: center;
+	margin-top: 12%;
+	margin-bottom: 3%;
+}
+
+.sub-title-erro {
+	text-align: center;
+	margin-top: 5%;
+}
+
+.btn-erro {
+	margin-top: 5%;
+}
+
+/*------------------/ERROS-GERAL------------------*/
+
+/*------------------FOOTER------------------*/
+.github {
+	text-decoration: none;
+	color: #FFFFFF;
+	/* display: block; */
+	align-items: center;
+	font-weight: 300;
+}
+
+.github:hover {
+	background-image: linear-gradient(to top, turquoise, steelblue, rebeccapurple);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: 600;
+}
+
+footer {
+	width: 100%;
+	background-color: #7B193F;
+	padding: 16px;
+	color: #FFFFFF;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	font-weight: 900;
+	height: 30px;
+}
+
+/*------------------/FOOTER------------------*/
+
+/*------------------POP UPS------------------*/
+.swal-text {
+	color: #4e545c;
+	font-size: 1.5rem;
+	text-align: center;
+	font-weight: 600;
+}
+
+.swal-title {
+	color: #7B193F;
+	font-weight: 800;
+}
+
+.swal-button {
+	background-color: #7B193F;
+}
+
+/*------------------/POP UPS------------------*/
