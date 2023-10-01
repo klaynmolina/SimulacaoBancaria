@@ -91,9 +91,10 @@ Para executar o projeto "SimulacaoBancaria" desenvolvido com Spring Boot em sua 
 
    Certifique-se de que o nome do arquivo JAR corresponda ao gerado no passo anterior.
 
-5. O aplicativo Spring Boot será iniciado e estará disponível em `http://localhost:8080/pagina-inicial`.
+5. O aplicativo Spring Boot será iniciado e estará disponível em [`http://localhost:8080/pagina-inicial`](http://localhost:8080/pagina-inicial).
 
 Agora você pode acessar o aplicativo da simulação bancária em seu navegador ou usar ferramentas como o Postman para interagir com a API.
 
 Lembre-se de que este é um projeto de exemplo e não contém dados reais de bancos ou transações financeiras. 
-Certifique-se de não compartilhar informações confidenciais ao interagir com este aplicativo.
+
+**Certifique-se de não compartilhar informações confidenciais ao interagir com este aplicativo.**
